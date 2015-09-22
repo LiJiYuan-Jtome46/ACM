@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://aidistan.github.io/browser-weixin-danmu/ -->
+<html class="js cssanimations"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>微信弹幕插件</title>
+  <meta name="description" content="将网页版微信的消息即时显示在任意标签页上">
+  <meta name="keywords" content="微信, 弹幕, 浏览器, 插件, 火狐, 谷歌, Firefox, Chrome">
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  <link rel="icon" type="image/png" href="./微信弹幕插件_files/icon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="./微信弹幕插件_files/icon.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI">
+  <link rel="apple-touch-icon-precomposed" href="./微信弹幕插件_files/icon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/images/icon.png">
+  <meta name="msapplication-TileColor" content="#c8c8c8">
+
+  <link rel="stylesheet" href="./微信弹幕插件_files/amazeui.min.css">
+  <link rel="stylesheet" href="./微信弹幕插件_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./微信弹幕插件_files/index.css">
+
+  <script src="./微信弹幕插件_files/hm.js"></script><script src="./微信弹幕插件_files/jquery.min.js"></script>
+  <script src="./微信弹幕插件_files/amazeui.min.js"></script>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?cd7464e7917842a708c6a4e085660a87";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+<script type="text/javascript" async="" src="./微信弹幕插件_files/embed.js" charset="UTF-8"></script><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style><link type="text/css" rel="stylesheet" href="./微信弹幕插件_files/embed.default.css"><style type="text/css">/* 修改样式 */
+
+#ds-thread #ds-reset li.ds-tab a.ds-current {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+#ds-thread #ds-reset li.ds-tab a:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+/* 头像动画 */
+
+#ds-reset .ds-avatar img,#ds-reset .ds-avatar img:hover{
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0s;
+    -moz-animation-duration: 0s;
+    -ms-animation-duration: 0s;
+    -o-animation-duration: 0s;
+    animation-duration: 0s;
+    -webkit-animation-duration: 0.7s;
+    -moz-animation-duration: 0.7s;
+    -ms-animation-duration: 0.7s;
+    -o-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+}
+
+
+@-webkit-keyframes swing {
+    20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; }
+
+    20% { -webkit-transform: rotate(15deg); }
+
+    40% { -webkit-transform: rotate(-10deg); }
+
+    60% { -webkit-transform: rotate(5deg); }
+
+    80% { -webkit-transform: rotate(-5deg); }
+
+    100% { -webkit-transform: rotate(0deg); }
+
+}
+
+
+@-moz-keyframes swing {
+    20% { -moz-transform: rotate(15deg); }
+
+    40% { -moz-transform: rotate(-10deg); }
+
+    60% { -moz-transform: rotate(5deg); }
+
+    80% { -moz-transform: rotate(-5deg); }
+
+    100% { -moz-transform: rotate(0deg); }
+
+}
+
+
+@-o-keyframes swing {
+    20% { -o-transform: rotate(15deg); }
+
+    40% { -o-transform: rotate(-10deg); }
+
+    60% { -o-transform: rotate(5deg); }
+
+    80% { -o-transform: rotate(-5deg); }
+
+    100% { -o-transform: rotate(0deg); }
+
+}
+
+
+@keyframes swing {
+    20% { transform: rotate(15deg); }
+
+    40% { transform: rotate(-10deg); }
+
+    60% { transform: rotate(5deg); }
+
+    80% { transform: rotate(-5deg); }
+
+    100% { transform: rotate(0deg); }
+
+}
+
+
+#ds-reset .ds-avatar img:hover{
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    -moz-animation-name: swing;
+    -o-animation-name: swing;
+    animation-name: swing;
+}
+
+</style></head>
+<body id="top">
+  <div class="am-container">
+    <div class="banner">
+      <h1>微信弹幕插件</h1>
+      <p>将网页版微信的消息显示在任意页面上</p>
+      <p class="banner-btnbox">
+        <a class="am-btn am-btn-warning am-round" href="https://addons.mozilla.org/zh-CN/firefox/addon/weixin-danmu/" target="_blank">
+          <i class="fa fa-firefox"></i> <strong>Firefox</strong>
+        </a>
+        <a class="am-btn am-btn-default am-round" href="https://github.com/aidistan/browser-weixin-danmu" target="_blank" style="padding: 8px 10px;">
+          <span class="am-icon am-icon-github am-icon-sm"></span>
+        </a>
+        <a class="am-btn am-btn-secondary am-round" href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E4%BF%A1%E5%BC%B9%E5%B9%95/oaglinapidhlmnnnkcmkmgkopbodjonl" target="_blank">
+          <i class="fa fa-chrome"></i> <strong>Chrome</strong>
+        </a>
+      </p>
+
+      <div class="am-sticky-placeholder" style="height: 51px; margin: 0px;"><nav class="scrollspy-nav am-sticky" data-am-sticky="" style="margin: 0px; top: 0px; left: 329.5px; width: 604px;">
+        <ul class="am-text-center">
+          <li><a href="http://aidistan.github.io/browser-weixin-danmu/#top" style="padding: 5px 10px;" class=""><img src="./微信弹幕插件_files/icon.png" width="36" height="36"></a></li>
+          <li><a href="http://aidistan.github.io/browser-weixin-danmu/#get-started" class="">安装</a></li>
+          <li><a href="http://aidistan.github.io/browser-weixin-danmu/#shoot-bullet" class="am-active">发射</a></li>
+          <li><a href="http://aidistan.github.io/browser-weixin-danmu/#faq">问答</a></li>
+          <li><a href="http://aidistan.github.io/browser-weixin-danmu/#more-info">更多</a></li>
+        </ul>
+      </nav></div>
+    </div>
+
+    <h2 id="get-started">安装插件</h2>
+    <p>对于 <i class="fa fa-firefox"></i> Firefox 浏览器</p>
+    <ul>
+      <li><a href="https://addons.mozilla.org/zh-CN/firefox/addon/weixin-danmu/" target="_blank">从火狐扩展商店安装</a>（推荐，插件能自动更新）</li>
+      <li><a href="http://aidistan.github.io/firefox-weixin-danmu/weixin-danmu.xpi">从插件官网直接安装</a></li>
+    </ul>
+    <p>对于 <i class="fa fa-chrome"></i> Chrome 浏览器</p>
+    <ul>
+      <li><a href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E4%BF%A1%E5%BC%B9%E5%B9%95/oaglinapidhlmnnnkcmkmgkopbodjonl" target="_blank">从谷歌网上应用商店安装</a>（推荐，插件能自动更新）</li>
+      <li><a href="http://aidistan.github.io/chrome-weixin-danmu/weixin-danmu.zip">从插件官网下载压缩包</a>，解压后将文件夹直接拖入 Chrome 的扩展页</li>
+    </ul>
+    <blockquote>
+      即将以 <i class="fa fa-chrome"></i> Chrome 插件方式支持 <i class="fa fa-internet-explorer"></i> Edge 浏览器
+    </blockquote>
+    <h3>基本使用</h3>
+    <ol>
+      <li>安装插件</li>
+      <li>在浏览器的任意一个标签页中登陆网页版微信</li>
+      <li>打开要捕获消息的群或好友的对话框</li>
+      <li>切换到要显示弹幕的任意一个网页</li>
+      <li>在手机微信上向所选的好友或群发消息</li>
+      <li>弹幕出现！</li>
+    </ol>
+    <h3>详细说明</h3>
+    <h4>使用工具栏按钮</h4>
+    <ul>
+      <li>未侦测到对话框时按钮呈灰色，点击按钮将打开网页微信页面</li>
+      <li>打开对话框后按钮会自动点亮，点击按钮将打开弹幕助手页面</li>
+    </ul>
+    <h4>修改默认设置</h4>
+    <p>打开浏览器插件页 ( <i class="fa fa-firefox"></i> <code>Ctrl + Shift + A</code>，<i class="fa fa-chrome"></i> 木有快捷键)，点击微信弹幕的设置按钮进入附加组件详情页面，从中可以：</p>
+    <ul>
+      <li>开启/关闭显示所有消息</li>
+      <li>调整弹幕的默认大小</li>
+      <li>开启/关闭好友昵称显示</li>
+      <li>开启/关闭微信标签固定</li>
+      <li>开启/关闭消息通知显示</li>
+      <li>开启/关闭弹幕测试模式</li>
+    </ul>
+    <blockquote>
+      通过配置是否“显示所有消息”，微信弹幕既可以在活动中使用固定群聊作为弹幕源而不会泄漏私人消息，也可以在自己上网时监听来自所有人的微信消息。
+    </blockquote>
+
+    <h2 id="shoot-bullet">发射弹幕</h2>
+    <p>微信发送的任意文字、表情、图片，默认会以固定大小、随机颜色、随机位置显示在屏幕上。（部分表情在网页微信上不会显示，因此无法做成弹幕）</p>
+    <p>目前支持自定义弹幕的颜色、大小和位置，格式为<code>：字</code>，具体说明如下：</p>
+    <ul>
+      <li>冒号同时支持中文全角符号和英文半角符号</li>
+      <li>冒号和魔力字符（效果示意中的灰色部分）不会显示在弹幕中</li>
+      <li>属性可以按照任意顺序设置，但必须放在消息的开头</li>
+      <li>设置字幕大小的效果可以叠加，即“:大:大:大”的效果是":大"的三倍（但大小有上下限）</li>
+    </ul>
+    <h3>魔力字符</h3>
+    <div class="ctl-color" style="background: #00aeef">蓝</div>
+    <div class="ctl-color" style="background: #ea428a">红</div>
+    <div class="ctl-color" style="background: #eed500">黄</div>
+    <div class="ctl-color" style="background: #f5a70d">橙</div>
+    <div class="ctl-color" style="background: #8bcb30">绿</div>
+    <div class="ctl-color" style="background: #9962c1">紫</div>
+    <div class="ctl-color" style="background: #333333">黑</div>
+    <div class="ctl-color" style="background: #eeeeee; color: #000000;">白</div>
+    <div class="ctl-other" style="font-size:20px;">大</div>
+    <div class="ctl-other" style="font-size:12px;">小</div>
+    <div class="ctl-other" style="padding-top: 0; padding-bottom: 18px;">顶</div>
+    <div class="ctl-other" style="padding-top: 18px; padding-bottom: 0;">底</div>
+    <h3>效果示意</h3>
+    <div id="demo-container">
+      <p id="demo-bullet1" class="demo-bullet"><span class="demo-lead">:大:黑</span>Valar Morghulis</p>
+      <p id="demo-bullet2" class="demo-bullet"><span class="demo-lead">:红:底:小</span>Valar Dohaeris</p>
+    </div>
+
+    <h2 id="faq">常见问题</h2>
+    <p id="faq_application">
+      <b>问：只能在浏览器的标签页上显示弹幕，有什么用途？</b><br>
+      答：随着浏览器功能的逐步增强，浏览器版的弹幕已可以满足绝大多数的需求：
+      </p><ul>
+        <li><b>传统幻灯片</b>可以导出PDF，用浏览器直接播放</li>
+        <li>推荐使用<b>网页幻灯片</b>，<a href="http://shwr.me/" target="_blank">Shower</a> 和 <a href="http://imakewebthings.com/deck.js/" target="_blank">deck.js</a> 都是不错的引擎</li>
+        <li>HTML5已原生支持<b>视频</b>的播放，可用<code>vidio</code>标签把视频嵌在网页里，也可直接把文件拖进浏览器播放。建议使用MP4格式，转码可以用<a href="http://mediacoder.com.cn/" target="_blank">MediaCoder</a>，最好用的开源转码软件，没有之一（全屏问题请<a href="http://aidistan.github.io/browser-weixin-danmu/#faq_video_fullscreen">移步至此</a>）</li>
+        <li>什么！你问<b>音频</b>怎么办？……别闹了</li>
+      </ul>
+      如果你有特殊需求，自己尝试使用但未成功，请在<a href="http://aidistan.github.io/browser-weixin-danmu/#comments">讨论区</a>中详细说明情况，我会尽量帮忙。
+    <p></p>
+
+    <p id="faq_video_fullscreen">
+      <b>问：视频一全屏，弹幕就不见了，怎么破？</b><br>
+      答：受浏览器和技术限制，弹幕无法支持<b> HTML5 视频</b>和<b> Flash 视频</b>的全屏功能。目前我暂时也不知道 Flash 视频怎么办，HTML5 视频有替代的解决方案：
+      </p><ul>
+        <li>直接用浏览器播放：可以使用浏览器的全屏功能达到相同效果（请按<code>F11</code>）</li>
+        <li>视频嵌在网页里：请将 <code>video</code> 设置成合理的大小，其余同上</li>
+      </ul>
+    <p></p>
+
+    <p id="faq_danmu_helper">
+      <b>问：弹幕助手是什么，有什么用途？</b><br>
+      答：基于 <a href="http://shwr.me/" target="_blank"><img src="./微信弹幕插件_files/logo.svg" height="19" style="padding-bottom:2px;"> Shower</a> 制作的弹幕助手，在作为<b>网页幻灯片</b>的一个示例的同时，还提供了<b>群聊入口</b>和<b>使用帮助</b>，是活动组织者的有力工具。
+      </p><ul>
+        <li>群聊入口二维码：需根据实际情况，将本地二维码图片拖进方框</li>
+        <li>使用帮助二维码：扫描后会跳转至当前页面的弹幕发射说明部分</li>
+      </ul>
+    <p></p>
+
+    <p id="faq_qq_emoji">
+      <b>问：QQ 表情的显示有些奇怪，怎么回事？</b><br>
+      答：网页版微信内置的 QQ 表情像素过低... 建议改为使用 Emoji 表情。
+    </p>
+
+    <p id="faq_slow_on_chrome">
+      <b>问：Chrome 版插件显示弹幕时，总有些延迟是怎么回事？</b><br>
+      答：这是受到 Chrome 自身机制的限制。出来混，总是要还的，我只能说这么多。
+    </p>
+
+    <h2 id="more-info">更多信息</h2>
+    <h3 id="how-to-support">如何支持</h3>
+    <p>这款插件是我的兴趣之作，若您觉得还不错，愿您能够给予支持：</p>
+    <ul>
+      <li>把此插件推荐给您的朋友，让更多人知道它</li>
+      <li>在<a href="https://addons.mozilla.org/en-US/firefox/addon/weixin-danmu/" target="_blank"> Firefox 扩展商店</a>或<a href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E4%BF%A1%E5%BC%B9%E5%B9%95/oaglinapidhlmnnnkcmkmgkopbodjonl" target="_blank"> Chrome 应用商城</a>上给本插件好评</li>
+      <li>通过评论、邮件或微信，把你的建议和想法告知我，哪怕只是个“赞”</li>
+      <li>用微信<a href="javascript: void(0)" data-am-modal="{target: &#39;#modal-qr2pay&#39;, closeViaDimmer: 0, width: 250, height: 285}">给我买包干脆面</a>，好让我啃着熬夜加班</li>
+      <div class="am-modal am-modal-no-btn" tabindex="-1" id="modal-qr2pay">
+        <div class="am-modal-dialog">
+          <div class="am-modal-hd">付款给 Aidi Stan
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a>
+          </div>
+          <div class="am-modal-bd">
+            <img src="./微信弹幕插件_files/qr2pay.png" class="am-img-responsive" alt="pay to aidistan">
+          </div>
+        </div>
+      </div>
+    </ul>
+    <h3 id="thanks">特别致谢</h3>
+    <ul>
+      <li>感谢<a href="https://github.com/Integ/WeShoot"> WeShoot </a>的开发者们，他们直接启发了本插件的开发</li>
+      <li>感谢<strong>小猪</strong>同学帮助开通开发者账号，让微信弹幕得以登陆 Chrome 商城</li>
+      <li>感谢<strong>目录哥</strong>、<strong>小猪</strong>等用户的赞助</li>
+    </ul>
+    <p>在此还要一并感谢所有微信弹幕插件用户，你们的支持是我更新插件的不懈动力！</p>
+    <h3 id="change-log">变更历史</h3>
+    <p>想了解新版本增加了哪些功能，修复了哪些 bug？快查看插件的变更历史吧：</p>
+    <ul>
+      <li><a href="https://github.com/aidistan/firefox-weixin-danmu/blob/master/HISTORY.md" target="_blank">微信弹幕 Firefox 版</a></li>
+      <li><a href="https://github.com/aidistan/chrome-weixin-danmu/blob/master/HISTORY.md" target="_blank">微信弹幕 Chrome 版</a></li>
+    </ul>
+    <h3 id="contact">联系方式</h3>
+    <p>欢迎联系我以告知使用中遇到的不便和问题，方式按推荐程度<b>从高至低</b>排序：</p>
+    <ul>
+      <li>留言：请前往下方的<a href="http://aidistan.github.io/browser-weixin-danmu/#comments">讨论区</a></li>
+      <li>电邮：<a href="mailto:aidistan@live.cn">aidistan@live.cn</a></li>
+      <li>微信：aidistan <small><a href="javascript: void(0)" data-am-modal="{target: &#39;#modal-qr2aidistan&#39;, closeViaDimmer: 0, width: 250, height: 285}">(二维码链接)</a></small></li>
+      <div class="am-modal am-modal-no-btn" tabindex="-1" id="modal-qr2aidistan">
+        <div class="am-modal-dialog">
+          <div class="am-modal-hd">Aidi Stan
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a>
+          </div>
+          <div class="am-modal-bd">
+            <img src="./微信弹幕插件_files/qr2aidistan.jpg" class="am-img-responsive" alt="aidistan&#39;s qrcode">
+          </div>
+        </div>
+      </div>
+    </ul>
+
+
+    <footer class="am-footer am-footer-default">
+      <div class="am-footer-miscs">
+        <p>Developed by <a href="https://github.com/aidistan/" target="_blank">Aidi Stan</a>.</p>
+        <p>CopyRight © 2015 <a href="http://adome.aidistan.net/" target="_blank">Aidi Stan</a>. Licensed under the MIT license.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./微信弹幕插件_files/index.js"></script>
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name: "adome"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+</body></html>
